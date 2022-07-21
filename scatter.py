@@ -10,6 +10,10 @@ np.random.seed(1)
 x1 = np.random.randint(0, 100, 50)
 y1 = np.random.randint(0, 100, 50)
 
+np.random.seed(2)
+x2 = np.random.randint(0, 100, 50)
+y2 = np.random.randint(0, 100, 50)
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
