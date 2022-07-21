@@ -30,6 +30,7 @@ app.layout = html.Div(children=[
         style={
             'textAlign': 'center',
             'color': colors['text'],
+            'background-color': colors['background']
         }
     ),
 
