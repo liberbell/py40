@@ -21,13 +21,16 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.layout = html.div([
     dcc.Graph(
         id='sample-scatter',
-        figure= {
+        figure={
             'data':[
                 go.Scatter(
-                    x = x1,
-                    y = y1,
-                    mode = 'markers',
-                    opacity = '0.7',
+                    x=x1,
+                    y=y1,
+                    mode='markers',
+                    opacity=0.7,
+                    marker={
+                        'size':15
+                    }
                 )
             ]
         }
