@@ -1,4 +1,5 @@
 
+from tkinter.ttk import Style
 import dash
 from dash import dcc
 from dash import html
@@ -13,7 +14,12 @@ colors = {
 }
 
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(
+        children='Hello Dash',
+        style = {
+            'textAlign':'center',
+        }
+        ),
 
     html.Div(children='''
         Dash: A web application framework for Python.
