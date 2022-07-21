@@ -17,9 +17,9 @@ app.layout = html.Div(children=[
     html.H1(
         children='Hello Dash',
         style={
-            'textAlign':'center',
+            'textAlign': 'center',
             'color': colors['text'],
-            'background_color': colors['background']
+            'background-color': colors['background']
         }
     ),
 
