@@ -27,7 +27,7 @@ app.layout = html.Div(children=[
         Dash: A web application framework for Python.
         ''',
         style={
-            'textAlign':'center',
+            'textAlign': 'center',
             'color': colors['text'],
         }
     ),
@@ -40,7 +40,8 @@ app.layout = html.Div(children=[
                 {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': 'Montréal'},
             ],
             'layout': {
-                'title': 'Dash Data Visualization'
+                'title': 'Dash Data Visualization',
+                'plot_bgcolor': colors['background']
             }
         }
     )
