@@ -6,6 +6,8 @@ from dash import html
 import pandas as pd
 
 df = pd.read_csv("time_series.csv")
+# print(df.head())
+# print(df['MSFT'])
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
