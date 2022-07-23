@@ -46,7 +46,7 @@ app.layout = html.Div([
                 xaxis={'title': 'Date'},
                 yaxis={'title': 'Stock Price'},
                 width=1000,
-                hieght=500,
+                height=500,
             )
         }
     )
