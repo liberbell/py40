@@ -1,5 +1,6 @@
 
 from tkinter.ttk import Style
+from turtle import width
 import dash
 from dash import dcc
 from dash import html
@@ -44,6 +45,8 @@ app.layout = html.Div([
             'layout': go.Layout(
                 xaxis={'title': 'Date'},
                 yaxis={'title': 'Stock Price'},
+                width=1000,
+                hieght=500,
             )
         }
     )
