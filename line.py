@@ -24,7 +24,7 @@ app.layout = html.Div([
                     y=df['MSFT'],
                     mode='lines',
                     opacity=0.5,
-                    maker={
+                    marker={
                         'size':15
                     },
                     name='Microsoft',
