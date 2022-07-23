@@ -3,6 +3,7 @@ from tkinter.ttk import Style
 import dash
 from dash import dcc
 from dash import html
+import plotly.graph_objs as go
 import pandas as pd
 
 df = pd.read_csv("time_series.csv")
