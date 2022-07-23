@@ -40,7 +40,11 @@ app.layout = html.Div([
                     },
                     name='Apple',
                 )
-            ]
+            ],
+            'layout': go.Layout(
+                xaxis={'title': 'Date'},
+                yaxis={'title': 'Stock Price'},
+            )
         }
     )
 ])
