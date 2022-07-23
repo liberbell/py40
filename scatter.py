@@ -31,8 +31,10 @@ app.layout = html.Div([
                     marker={
                         'size':5
                     },
-                    name='Group1'
+                    name='Group1',
+                ),
 
+                go.Scatter(
                     x=x2,
                     y=y2,
                     mode='markers',
@@ -40,7 +42,7 @@ app.layout = html.Div([
                     marker={
                         'size':5
                     },
-                    name='Group2'
+                    name='Group2',
                 )
             ]
         }
