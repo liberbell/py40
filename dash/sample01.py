@@ -42,8 +42,8 @@ app.layout= html.Div([
             {'label': "Eric", 'value': "eric"},
             {'label': "Alex", 'value': "alex"},
         ],
-        values=['eric', 'alex'],
-    ),
+        value=['eric', 'alex']
+    )
 ])
 
 if __name__ == '__main__':
