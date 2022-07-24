@@ -48,6 +48,12 @@ app.layout= html.Div([
     dcc.Input(
         value='Alex',
         type='text'
+    ),
+    html.Label('Slider'),
+    dcc.Slider(
+        min=0,
+        max=5,
+        marks={i:i for i in range(1,6)}
     )
 ])
 
