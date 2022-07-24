@@ -12,7 +12,9 @@ name = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.ca
 print("Name: " + name[0].string)
 
 students = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-action > p.subscribers")
-print(students[0].string)
+students_string = students[0].string
+students_split = students_string.split("：")
+print("Student number: " + students_split[1])
 
 reviews = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-action > p.reviews")
 print(reviews[0].string)
