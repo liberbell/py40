@@ -1,3 +1,4 @@
+from msilib.schema import Component
 from tkinter.ttk import Style
 import dash
 from dash import dcc
@@ -12,6 +13,12 @@ app.layout = html.Div([
     dcc.Input(id="input-div", value="initial value", type="text"),
     html.Div(id="output-div"),
 ])
+
+@app.callback(
+    Output(component_id="output-div", componnent_property="children"),
+    [Input(component_id="input-div", component_property="value")]
+
+)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
