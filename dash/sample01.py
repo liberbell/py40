@@ -34,6 +34,15 @@ app.layout= html.Div([
             {'label': "Alex", 'value': "alex"},
         ],
         value='eric',
+    ),
+    html.Label('Check boxes'),
+    dcc.Checklist(
+        options=[
+            {'label': "Bob", 'value': "bob"},
+            {'label': "Eric", 'value': "eric"},
+            {'label': "Alex", 'value': "alex"},
+        ],
+        values='eric',
     )
 ])
 
