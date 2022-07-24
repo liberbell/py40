@@ -15,6 +15,15 @@ app.layout= html.Div([
             {'label': "Alex", 'value': "alex"},
         ],
         value='eric',
+    ),
+    html.Label('Multi-select Dropdown'),
+    dcc.Dropdown(
+        options=[
+            {'label': "Bob", 'value': "bob"},
+            {'label': "Eric", 'value': "eric"},
+            {'label': "Alex", 'value': "alex"},
+        ],
+        value='eric',
     )
 ])
 
