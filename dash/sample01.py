@@ -12,8 +12,9 @@ app.layout= html.Div([
         options=[
             {'label': "Bob", 'value': "bob"},
             {'label': "Eric", 'value': "eric"},
-            {'label': "Alex", 'value': "alex"}
-        ]
+            {'label': "Alex", 'value': "alex"},
+        ],
+        value='eric',
     )
 ])
 
