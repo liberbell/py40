@@ -1,5 +1,3 @@
-from msilib.schema import Component
-from tkinter.ttk import Style
 import dash
 from dash import dcc
 from dash import html
