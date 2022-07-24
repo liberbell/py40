@@ -9,6 +9,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
     dcc.Input(id="input-div", value="initial value", type="text"),
+    html.Div(id="output-div"),
 ])
 
 if __name__ == '__main__':
