@@ -13,7 +13,7 @@ app.layout = html.Div([
 ])
 
 @app.callback(
-    Output(component_id="output-div", componnent_property="children"),
+    Output(component_id="output-div", component_property="children"),
     [Input(component_id="input-div", component_property="value")]
 )
 def update(input_value):
