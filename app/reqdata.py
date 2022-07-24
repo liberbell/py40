@@ -8,5 +8,6 @@ res = requests.get(URL)
 
 soup = BeautifulSoup(res.text, "html.parser")
 # print(soup)
-res1 = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-image > span")
-print(res1[0].string)
+name = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-image > span")
+print("Name: " + name[0].string)
+
