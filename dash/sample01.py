@@ -27,13 +27,13 @@ app.layout= html.Div([
         multi=True,
     ),
     html.Label('Radio botton'),
-    dcc.Dropdown(
+    dcc.RadioItems(
         options=[
             {'label': "Bob", 'value': "bob"},
             {'label': "Eric", 'value': "eric"},
             {'label': "Alex", 'value': "alex"},
         ],
-        value=['eric', 'alex'],
+        value='eric',
     )
 ])
 
