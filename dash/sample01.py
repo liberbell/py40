@@ -43,6 +43,11 @@ app.layout= html.Div([
             {'label': "Alex", 'value': "alex"},
         ],
         value=['eric', 'alex']
+    ),
+    html.Label('Text Input'),
+    dcc.Input(
+        value='Alex',
+        type='text'
     )
 ])
 
