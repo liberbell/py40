@@ -17,8 +17,9 @@ app.layout = html.Div([
 @app.callback(
     Output(component_id="output-div", componnent_property="children"),
     [Input(component_id="input-div", component_property="value")]
-
 )
+def update(input_value):
+    return 'You entered {}'.format(input_value)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
