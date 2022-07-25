@@ -1,4 +1,3 @@
-from unittest import result
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
@@ -39,5 +38,5 @@ df = pd.read_csv("assets/data.csv")
 # print(datetime.datetime.today().strftime('%Y/%-m/%-d'))
 date = datetime.datetime.today().strftime('%Y/%-m/%-d')
 
-subscribers = result['n_students']
-review = result['n_reviews']
+subscribers = results['n_students']
+review = results['n_reviews']
