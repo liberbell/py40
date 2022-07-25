@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+import datetime
 
 # URL = "https://scraping-for-beginner.herokuapp.com/udemy"
 
@@ -29,4 +30,7 @@ import pandas as pd
 # print(results)
 
 df = pd.read_csv("assets/data.csv")
-print(df.head())
+# print(df.head())
+# print(df.tail())
+
+print(datetime.datetime.today().strftime('%Y/%-m/%-d'))
