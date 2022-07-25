@@ -8,7 +8,8 @@ res = requests.get(URL)
 
 soup = BeautifulSoup(res.text, "html.parser")
 # print(soup)
-name = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-image > span")
+name_data = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-image > span")
+name = name_data[0].string
 print("Name: " + name[0].string)
 
 students = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-action > p.subscribers")
@@ -22,3 +23,6 @@ reviews = soup.select("body > div.row > div > div:nth-child(2) > div > div > div
 reviews_string = reviews[0].string
 reviews_split = reviews_string.split("：")[1]
 print(int(reviews_split))
+
+results = {"name": name, "students": students_split, "reviews": reviews_split}
+print(results)
