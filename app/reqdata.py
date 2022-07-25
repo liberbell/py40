@@ -10,7 +10,7 @@ soup = BeautifulSoup(res.text, "html.parser")
 # print(soup)
 name_data = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-image > span")
 name = name_data[0].string
-print("Name: " + name[0].string)
+print(name)
 
 students = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-action > p.subscribers")
 students_string = students[0].string
