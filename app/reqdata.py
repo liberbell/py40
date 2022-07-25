@@ -40,3 +40,7 @@ date = datetime.datetime.today().strftime('%Y/%-m/%-d')
 
 subscribers = results['n_students']
 review = results['n_reviews']
+
+print(subscribers, review)
+
+print(pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews']))
