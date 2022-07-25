@@ -20,5 +20,5 @@ print(int(students_split))
 
 reviews = soup.select("body > div.row > div > div:nth-child(2) > div > div > div.card-action > p.reviews")
 reviews_string = reviews[0].string
-reviews_split = reviews_string.split("：")
-# print("Review num: ", int(reviews[0].string))
+reviews_split = reviews_string.split("：")[1]
+print(int(reviews_split))
