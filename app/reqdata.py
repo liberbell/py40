@@ -46,4 +46,5 @@ review = results['n_reviews']
 # print(pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews']))
 results = pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews'])
 
-print(pd.concat([df, results]))
+df = pd.concat([df, results])
+print(df.tail())
