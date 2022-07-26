@@ -27,11 +27,12 @@ def get_udemy_info():
 def 
 
 df = pd.read_csv("assets/data.csv")
-
 date = datetime.datetime.today().strftime('%Y/%-m/%-d')
 
-subscribers = results['n_students']
-review = results['n_reviews']
+_results = get_udemy_info()
+
+subscribers = _results['n_students']
+review = _results['n_reviews']
 
 results = pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews'])
 
