@@ -1,3 +1,4 @@
+from calendar import different_locale
 import pandas as pd
 import datetime
 
@@ -12,3 +13,9 @@ for _date in df["date"]:
 
 n_subscribers = df["subscribers"].values
 n_reviews = df["reviews"].values
+
+diff_subscribers = df["subscribers"].diff().values
+# print(diff_subscribers)
+
+diff_reviews = df["reviews"].diff().values
+print(diff_reviews)
