@@ -47,4 +47,5 @@ review = results['n_reviews']
 results = pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews'])
 
 df = pd.concat([df, results])
-print(df.tail())
+# print(df.tail())
+df.to_csv("assets/data.csv", index=False)
