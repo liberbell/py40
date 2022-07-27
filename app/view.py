@@ -36,6 +36,14 @@ app.layout = html.Div(children=[
                         name='Subscribe num',
                         opacity=0.7,
                         yaxis='y1',
+                    ),
+                    go.Scatter(
+                        x=dates,
+                        y=diff_subscribers,
+                        mode='lines+markers',
+                        name='Subscribe num',
+                        opacity=0.7,
+                        yaxis='y1',
                     )
                 ]
             }
