@@ -46,13 +46,13 @@ app.layout = html.Div(children=[
                         yaxis='y2',
                     )
                 ],
-                'layout': go.Layout(
-                    title='Subscribers',
-                    xaxis=dict(title='date'),
-                    yaxis=dict(title='Subscriber num',side='left', showgrid=False, range=[2500, max(n_subscribers)+100]),
-                    yaxis2=dict(title='Subscriber diff', side='right', showgrid=False,
-                        range=[0, max(diff_subscribers[1:])]),
-                )
+                # 'layout': go.Layout(
+                #     title='Subscribers',
+                #     xaxis=dict(title='date'),
+                #     yaxis=dict(title='Subscriber num',side='left', showgrid=False, range=[2500, max(n_subscribers)+100]),
+                #     yaxis2=dict(title='Subscriber diff', side='right', showgrid=False,
+                #         range=[0, max(diff_subscribers[1:])]),
+                # )
             }
         )
     ])
