@@ -1,3 +1,4 @@
+from turtle import title
 import pandas as pd
 import datetime
 import plotly.graph_objs as go
@@ -42,9 +43,16 @@ app.layout = html.Div(children=[
                         y=diff_subscribers,
                         name='Subscriber diff',
                         opacity=0.7,
-                        yaxis='y1',
+                        yaxis='y2',
                     )
-                ]
+                ],
+                'layout': go.Layout(
+                    title='Subscribers',
+                    xaxis=dict(title='date'),
+                    yaxis=dict(title='Subscriber num', side=left, showgrid=False, range=[2500, max(n_subscribers)+100]),
+                    yaxis2=dict(title='Subscriber diff', side=right, showgrid=False,
+                        range=[0, max(diff_subscribers[1:])]),
+                )
             }
         )
     ])
