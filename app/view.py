@@ -26,7 +26,18 @@ app.layout = html.Div(children=[
     html.H2(children='Application by Python Web Scraping.'),
     html.Div(children=[
         dcc.Graph(
-            
+            id='subscriber_graph',
+            figure={
+                'data':[
+                    go.Scatter(
+                        x=dates,
+                        y=n_subscribers,
+                        mode='lines+markers',
+                        name='Subscribe num',
+                        opacity=0.7
+                    )
+                ]
+            }
         )
     ])
 ])
