@@ -10,3 +10,6 @@ date = datetime.date.today()
 # print(date)
 row = Data(date=date, subscribers=3500, reviews=200)
 # print(row.reviews)
+
+db_session(row)
+db_session.commit()
