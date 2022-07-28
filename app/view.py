@@ -56,7 +56,7 @@ app.layout = html.Div(children=[
     ]),
     html.Div(children=[
         dcc.Graph(
-            id='subscriber_graph',
+            id='reviewe_graph',
             figure={
                 'data':[
                     go.Scatter(
