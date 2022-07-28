@@ -70,7 +70,7 @@ app.layout = html.Div(children=[
                     go.Bar(
                         x=dates,
                         y=diff_reviews,
-                        name='Subscriber diff',
+                        name='Reviews diff',
                         yaxis='y2',
                     )
                 ],
