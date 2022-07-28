@@ -53,7 +53,36 @@ app.layout = html.Div(children=[
                 )
             }
         )
-    ])
+    ]),
+    html.Div(children=[
+        dcc.Graph(
+            id='subscriber_graph',
+            figure={
+                'data':[
+                    go.Scatter(
+                        x=dates,
+                        y=n_subscribers,
+                        mode='lines+markers',
+                        name='Subscribe num',
+                        opacity=0.7,
+                        yaxis='y1',
+                    ),
+                    go.Bar(
+                        x=dates,
+                        y=diff_subscribers,
+                        name='Subscriber diff',
+                        yaxis='y2',
+                    )
+                ],
+                'layout': go.Layout(
+                    title='Subscribers',
+                    xaxis=dict(title='date'),
+                    yaxis=dict(title='Subscriber num',side='left', showgrid=False, range=[2500, max(n_subscribers)+100]),
+                    yaxis2=dict(title='Subscriber diff', side='right', overlaying='y', showgrid=False, range=[0, max(diff_subscribers[1:])]),
+                )
+            }
+        )
+    ]),
 ])
 
 if __name__ == '__main__':
