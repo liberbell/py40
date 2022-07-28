@@ -80,6 +80,7 @@ app.layout = html.Div(children=[
                     xaxis=dict(title='date'),
                     yaxis=dict(title='Review num', side='left', showgrid=False, range=[0, max(n_reviews)+10]),
                     yaxis2=dict(title='Reviews diff', side='right', overlaying='y', showgrid=False, range=[0, max(diff_reviews[1:])]),
+                    margin=dict(l=200, r=200, b=100, t=200),
                 )
             }
         )
