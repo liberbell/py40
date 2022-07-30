@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
-import pandas as pd
 import datetime
+from assets.database import db_session
+from assets.models import Data
 
 def get_udemy_info():
     URL = "https://scraping-for-beginner.herokuapp.com/udemy"
