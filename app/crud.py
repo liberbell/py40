@@ -31,5 +31,7 @@ datum.subscribers = 10000
 datum = db_session.query(Data).filter_by(subscribers=10000).one()
 print(datum.subscribers)
 
-db_session.delete(datum)
-db_session.commit()
+# db_session.delete(datum)
+# db_session.commit()
+
+Data.query.delete()
