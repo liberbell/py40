@@ -29,7 +29,7 @@ def write_data():
     # df = pd.read_csv("assets/data.csv")
     _results = get_udemy_info()
 
-    date = datetime.datetime.today().strftime('%Y/%-m/%-d')
+    date = datetime.date.today()
     subscribers = _results['n_students']
     review = _results['n_reviews']
 
@@ -38,6 +38,8 @@ def write_data():
     # df = pd.concat([df, results])
     # df.to_csv("assets/dataout.csv", index=False)
     row = Data(date=date, subscribers=subscribers, reviews=review)
+    db_session.add(row)
+    db_session.commit()
 
 if __name__ == "__main__":
     write_data()
