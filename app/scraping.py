@@ -26,17 +26,18 @@ def get_udemy_info():
     return results
 
 def write_data():
-    df = pd.read_csv("assets/data.csv")
+    # df = pd.read_csv("assets/data.csv")
     _results = get_udemy_info()
 
     date = datetime.datetime.today().strftime('%Y/%-m/%-d')
     subscribers = _results['n_students']
     review = _results['n_reviews']
 
-    results = pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews'])
+    # results = pd.DataFrame([[date, subscribers, review]], columns=["date", 'subscribers', 'reviews'])
 
-    df = pd.concat([df, results])
-    df.to_csv("assets/dataout.csv", index=False)
+    # df = pd.concat([df, results])
+    # df.to_csv("assets/dataout.csv", index=False)
+    row = Data(date=date, subscribers=subscribers, reviews=review)
 
 if __name__ == "__main__":
     write_data()
