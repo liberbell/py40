@@ -25,5 +25,11 @@ print(db_session.query(Data).all()[0].subscribers)
 datum = db_session.query(Data).all()[0]
 datum.subscribers = 10000
 # print(datum)
-db_session.add(datum)
+# db_session.add(datum)
+# db_session.commit()
+
+datum = db_session.query(Data).filter_by(subscribers=10000).one()
+print(datum.subscribers)
+
+db_session.delete(datum)
 db_session.commit()
