@@ -9,3 +9,6 @@ df = pd.read_csv("assets/data.csv")
 
 date1 = datetime.datetime.strptime(df.iloc[0, 0], '%Y/%m/%d').date()
 print(date1, type(date1))
+
+for index, _df in df.iterrows():
+    print(_df['date'])
