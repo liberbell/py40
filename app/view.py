@@ -8,18 +8,32 @@ from dash import html
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-df = pd.read_csv("assets/data.csv")
+# df = pd.read_csv("assets/data.csv")
+# dates = []
+# for _date in df["date"]:
+#     date = datetime.datetime.strptime(_date, "%Y/%m/%d").date()
+#     dates.append(date)
+
+# n_subscribers = df["subscribers"].values
+# n_reviews = df["reviews"].values
+
+# diff_subscribers = df["subscribers"].diff().values
+# diff_reviews = df["reviews"].diff().values
+# # print(diff_reviews)
+
+data = db_session.query(Data.date, Data.subscribers, Data.reviews).all()
+
 dates = []
-for _date in df["date"]:
-    date = datetime.datetime.strptime(_date, "%Y/%m/%d").date()
-    dates.append(date)
+subscribers = []
+reviews = []
+for datum in data:
+    dates.append(datum.date)
+    subscribers.append(datum.subscribers)
+    reviews.append(datum.reviews)
 
-n_subscribers = df["subscribers"].values
-n_reviews = df["reviews"].values
+diff_subscribers = pd.Series(subscribers).diff().values
+diff_reviews = pd.Series(subscribers).diff().values
 
-diff_subscribers = df["subscribers"].diff().values
-diff_reviews = df["reviews"].diff().values
-# print(diff_reviews)
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
