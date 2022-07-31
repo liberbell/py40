@@ -12,3 +12,5 @@ for datum in data:
     dates.append(datum.date)
     subscribers.append(datum.subscribers)
     reviews.append(datum.reviews)
+    # print(dates)
+    print(pd.Series(subscribers).diff())
