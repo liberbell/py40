@@ -1,5 +1,5 @@
 from xmlrpc.client import DateTime
-import assets import models
+from assets import models
 import pandas as pd
 from assets.database import db_session
 import datetime
