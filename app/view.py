@@ -6,6 +6,9 @@ import dash
 from dash import dcc
 from dash import html
 
+from assets.database import db_session
+from assets.models import Data
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # df = pd.read_csv("assets/data.csv")
@@ -46,7 +49,7 @@ app.layout = html.Div(children=[
                 'data':[
                     go.Scatter(
                         x=dates,
-                        y=n_subscribers,
+                        y=subscribers,
                         mode='lines+markers',
                         name='Subscribe num',
                         opacity=0.7,
@@ -62,7 +65,7 @@ app.layout = html.Div(children=[
                 'layout': go.Layout(
                     title='Subscribers',
                     xaxis=dict(title='date'),
-                    yaxis=dict(title='Subscriber num',side='left', showgrid=False, range=[2500, max(n_subscribers)+100]),
+                    yaxis=dict(title='Subscriber num',side='left', showgrid=False, range=[2500, max(subscribers)+100]),
                     yaxis2=dict(title='Subscriber diff', side='right', overlaying='y', showgrid=False, range=[0, max(diff_subscribers[1:])]),
                     margin=dict(l=200, r=200, b=100, t=200)
                 )
@@ -76,7 +79,7 @@ app.layout = html.Div(children=[
                 'data':[
                     go.Scatter(
                         x=dates,
-                        y=n_reviews,
+                        y=reviews,
                         mode='lines+markers',
                         name='Reviewer num',
                         opacity=0.7,
@@ -92,7 +95,7 @@ app.layout = html.Div(children=[
                 'layout': go.Layout(
                     title='Subscribers',
                     xaxis=dict(title='date'),
-                    yaxis=dict(title='Review num', side='left', showgrid=False, range=[0, max(n_reviews)+10]),
+                    yaxis=dict(title='Review num', side='left', showgrid=False, range=[0, max(reviews)+10]),
                     yaxis2=dict(title='Reviews diff', side='right', overlaying='y', showgrid=False, range=[0, max(diff_reviews[1:])]),
                     margin=dict(l=200, r=200, b=100, t=200),
                 )
