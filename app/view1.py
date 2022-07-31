@@ -3,7 +3,7 @@ from assets.models import Data
 import pandas as pd
 
 data = db_session.query(Data.date, Data.subscribers, Data.reviews).all()
-print(data[0].date)
+# print(data[0].date)
 
 dates = []
 subscribers = []
@@ -14,5 +14,5 @@ for datum in data:
     reviews.append(datum.reviews)
     # print(dates)
 
-diff_subscribers = pd.Series(subscribers).diff()
-diff_reviews = pd.Series(subscribers).diff()
+diff_subscribers = pd.Series(subscribers).diff().values
+diff_reviews = pd.Series(subscribers).diff().values
