@@ -7,8 +7,9 @@ import datetime
 df = pd.read_csv("assets/data.csv")
 # print(type(df.iloc[0, 0]))
 
-date1 = datetime.datetime.strptime(df.iloc[0, 0], '%Y/%m/%d').date()
-print(date1, type(date1))
+# date1 = datetime.datetime.strptime(df.iloc[0, 0], '%Y/%m/%d').date()
+# print(date1, type(date1))
 
 for index, _df in df.iterrows():
-    print(_df['date'])
+    date = datetime.datetime.strptime(_df['date'], '%Y/%m/%d').date()
+    print(date)
