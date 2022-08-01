@@ -37,8 +37,9 @@ for datum in data:
 diff_subscribers = pd.Series(subscribers).diff().values
 diff_reviews = pd.Series(subscribers).diff().values
 
-
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+server = app.server
 
 app.layout = html.Div(children=[
     html.H2(children='Application by Python Web Scraping.'),
